@@ -1,0 +1,143 @@
+In your own terms, define the following terms:
+●	What is HTTP?
+○	Hypertext transfer protocol, a way information is transferred from one computer to another usually coded in html
+●	What is a URL?
+○	Uniform resource locator, its made up of an ID to let your know what is being transferred such a http, and its made up a name such as a website name like www.google.com
+●	What is DNS?
+○	Domain Name System, helps the computer turn a domain name into an ip address. Every device has an ip address that can be used to find it and access its information.
+●	What is a query string?
+○	A query string is a part of a url, normally at the end, it comes after the question mark ? and is a key value pair 
+●	What are two HTTP verbs and how are they different?
+○	Get and Post, get gets information and displays it in the brower, get has no impact or side affects to the server. Post updates something and has side affects, it changes data in the server in some way.
+●	What is an HTTP request?
+○	An http request is made by a client computer to a named server like a website, then the website / server sends a response to the client computer.
+●	What is an HTTP response?
+○	The answer the website / host/ server returns to the client / individual device that made a request.
+●	What is an HTTP header? Give a couple examples of request and response headers you have seen.
+○	Http headers let the client or the server pass additional information with the request or response such as status code like 200 for info that was delivered successfully or 404 for info not found.
+●	What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+○	The browser sends a request / attempt to contact the host / server located at the URL entered. The url is translated into an ip address by the browser to make it easier for the client computer to find the server and get the request complete. If found, the host / server returns the request to the client with the requested info.
+Part Two: Practice Tools
+1.	Using curl, make a GET request to the icanhazdadjoke.com API to find all jokes involving the word “pirate”
+curl https://icanhazdadjoke.com/search?term=pirate
+
+
+StatusCode        : 200
+StatusDescription : OK
+Content           : <!DOCTYPE html>
+                    <html lang="en">
+                    <head>
+                    <meta charset="utf-8">
+                    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1...
+RawContent        : HTTP/1.1 200 OK
+                    Transfer-Encoding: chunked
+                    Connection: keep-alive
+                    access-control-allow-headers: User-Agent, Content-Type
+                    access-control-allow-methods: GET
+                    access-control-allow-origin: *
+                    access-c...
+Forms             : {}
+Headers           : {[Transfer-Encoding, chunked], [Connection, keep-alive], [access-control-allow-headers, User-Agent, Content-Type], [access-control-allow-methods, GET]...}
+Images            : {@{innerHTML=; innerText=; outerHTML=<img alt="icanhazdadjoke logo" src="/static/smile.svg">; outerText=; tagName=IMG; alt=icanhazdadjoke logo;
+                    src=/static/smile.svg}, @{innerHTML=; innerText=; outerHTML=<img width="139" height="40" style="width: 139px; height: 40px; max-height: 40px;" alt="Add to Slack"   
+                    src="https://platform.slack-edge.com/img/add_to_slack.png" srcset="https://platform.slack-edge.com/img/add_to_slack.png 1x,
+                    https://platform.slack-edge.com/img/add_to_slack@2x.png 2x">; outerText=; tagName=IMG; width=139; height=40; style=width: 139px; height: 40px; max-height: 40px;;   
+                    alt=Add to Slack; src=https://platform.slack-edge.com/img/add_to_slack.png; srcset=https://platform.slack-edge.com/img/add_to_slack.png 1x,
+                    https://platform.slack-edge.com/img/add_to_slack@2x.png 2x}, @{innerHTML=; innerText=; outerHTML=<img style="margin-left: -0.5em;" src="/static/alexa-logo.png">;   
+                    outerText=; tagName=IMG; style=margin-left: -0.5em;; src=/static/alexa-logo.png}}
+InputFields       : {@{innerHTML=; innerText=; outerHTML=<input name="search_term" class="input" type="text" placeholder="Search terms..." value="pirate">; outerText=; tagName=INPUT;  
+                    name=search_term; class=input; type=text; placeholder=Search terms...; value=pirate}}
+Links             : {@{innerHTML=
+                    <img alt="icanhazdadjoke logo" src="/static/smile.svg">
+                    <span class="subtitle pushhalf--left">
+                    icanhazdadjoke
+                    </span>
+                    ; innerText= icanhazdadjoke  ; outerHTML=<a class="nav-item is-brand" href="/">
+                    <img alt="icanhazdadjoke logo" src="/static/smile.svg">
+                    <span class="subtitle pushhalf--left">
+                    icanhazdadjoke
+                    </span>
+                    </a>; outerText= icanhazdadjoke  ; tagName=A; class=nav-item is-brand; href=/}, @{innerHTML=
+                    <span class="icon is-small">
+                    <i class="fa fa-random"></i>
+                    </span>
+                    <span class="pushquarter--left">
+                    Random joke
+                    </span>
+                    ; innerText=  Random joke  ; outerHTML=<a class="nav-item is-tab" href="/">
+                    <span class="icon is-small">
+                    <i class="fa fa-random"></i>
+                    </span>
+                    <span class="pushquarter--left">
+                    Random joke
+                    </span>
+                    </a>; outerText=  Random joke  ; tagName=A; class=nav-item is-tab; href=/}, @{innerHTML=
+                    <span class="icon is-small">
+                    <i class="fa fa-search"></i>
+                    </span>
+                    <span class="pushquarter--left">
+                    Search jokes
+                    </span>
+                    ; innerText=  Search jokes  ; outerHTML=<a class="nav-item is-tab" href="/search">
+                    <span class="icon is-small">
+                    <i class="fa fa-search"></i>
+                    </span>
+                    <span class="pushquarter--left">
+                    Search jokes
+                    </span>
+                    </a>; outerText=  Search jokes  ; tagName=A; class=nav-item is-tab; href=/search}, @{innerHTML=
+                    <span class="icon is-small">
+                    <i class="fa fa-pencil-square-o"></i>
+                    </span>
+                    <span class="pushquarter--left">
+                    Submit new joke
+                    </span>
+                    ; innerText=  Submit new joke  ; outerHTML=<a class="nav-item is-tab" href="/submit">
+                    <span class="icon is-small">
+                    <i class="fa fa-pencil-square-o"></i>
+                    </span>
+                    <span class="pushquarter--left">
+                    Submit new joke
+                    </span>
+                    </a>; outerText=  Submit new joke  ; tagName=A; class=nav-item is-tab; href=/submit}...}
+ParsedHtml        : mshtml.HTMLDocumentClass
+RawContentLength  : 10934
+
+2.	Use dig to find what the IP address is for icanhazdadjoke.com
+dig https://icanhazdadjoke.com/
+
+; <<>> DiG 9.18.1-1ubuntu1.2-Ubuntu <<>> https://icanhazdadjoke.com/
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NXDOMAIN, id: 30715
+;; flags: qr rd ra; QUERY: 1, ANSWER: 0, AUTHORITY: 1, ADDITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+; EDNS: version: 0, flags:; udp: 1232
+; COOKIE: e63e3d0378484be52b63173464989e3f66ae04804a660c53 (good)
+;; QUESTION SECTION:
+;https://icanhazdadjoke.com/.   IN      A
+
+;; AUTHORITY SECTION:
+.                       10800   IN      SOA     a.root-servers.net. nstld.verisign-grs.com. 2023062501 1800 900 604800 86400
+
+;; Query time: 10 msec
+;; SERVER: 172.19.128.1#53(172.19.128.1) (UDP)
+;; WHEN: Sat Jun 24 01:49:19 EDT 2023
+;; MSG SIZE  rcvd: 159
+
+3.	Make a simple web page and serve it using python3 -m http.server. Visit the page in a browser.
+Ok.
+
+Part Three: Explore Dev Tools
+Build a very simple HTML form that uses the GET method (it can use the same page URL for the action) when the form is submitted.
+Add a field or two to the form and, after submitting it, explore in Chrome Developer tools how you can view the request and response headers.
+Edit the page to change the form type to POST, refresh in the browser and re-submit. Do you still see the field in the query string? Explore in Chrome how you can view the request and response headers, as well as the form data.
+Ok.
+Part Four: Explore the URL API
+At times, it’s useful for your JavaScript to look at the URL of the browser window and change how the script works depending on parts of that (particularly the query string).
+Read about the URL API
+Try some of the code examples in the Chrome Console so that you can get comfortable with the basic methods and properties for instances of the URL class.
+ok.
+
